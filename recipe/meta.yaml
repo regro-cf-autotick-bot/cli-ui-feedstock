@@ -1,5 +1,5 @@
 {% set name = "cli-ui" %}
-{% set version = "0.15.2" %}
+{% set version = "0.16.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cli-ui-{{ version }}.tar.gz
-  sha256: 5b58167504d8af43dc29eaa19a9b8cdcab84f47eb5555af9194d11366227a5de
+  sha256: 57fefcc7187329031c84c9262548decc48ab94a13798ea90a99c760cd9b302c2
 
 build:
   number: 0
@@ -18,11 +18,11 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6,<4.0
+    - python >=3.7,<4.0
     - poetry
   run:
     - colorama >=0.4.1
-    - python >=3.6,<4.0
+    - python >=3.7,<4.0
     - tabulate >=0.8.3
     - unidecode >=1.0.23
 
