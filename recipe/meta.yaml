@@ -1,5 +1,5 @@
 {% set name = "cli-ui" %}
-{% set version = "0.16.1" %}
+{% set version = "0.17.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cli-ui-{{ version }}.tar.gz
-  sha256: 97feef6664be4441a15430726c39f7c19a1f84c3bdea65c8ec70662fc57f7006
+  sha256: 19a35b658bd19a1278dcb75330b28505a18753507fbbbe82cde59c7514e7cdee
 
 build:
   number: 0
