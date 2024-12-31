@@ -7,22 +7,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cli-ui-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cli-ui-{{ version }}.tar.gz
   sha256: 2f67e50cf474e76ad160c3e660bbad98bf8b8dfb8d847765f3a261b7e13c05fa
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.7,<4.0
+    - python {{ python_min }}
     - poetry
   run:
     - colorama >=0.4.1
-    - python >=3.7,<4.0
+    - python >={{ python_min }},<4.0
     - tabulate >=0.8.3
     - unidecode >=1.0.23
 
@@ -33,6 +33,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/dmerejkowsky/python-cli-ui
